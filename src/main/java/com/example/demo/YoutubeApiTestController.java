@@ -31,7 +31,7 @@ import com.google.api.services.youtube.model.VideoListResponse;
 
 @Controller
 @RequestMapping("/test")
-public class YoutubeApiTest {
+public class YoutubeApiTestController {
 	
 	private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
 
