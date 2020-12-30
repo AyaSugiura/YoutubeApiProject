@@ -6,6 +6,18 @@
 <body>
 <main>
 <h1>テスト出力</h1>
+<ul>
+	<p>条件</p>
+	<li>
+		タイトルに「エンジニア」を含む
+	</li>
+	<li>
+		半年以内に公開
+	</li>
+	<li>
+		再生回数順で上位10件
+	</li>
+</ul>
 <table border="1">
 	<thead>
 		<tr>
@@ -21,10 +33,12 @@
 		<tr th:each="searchResultMap, stat : ${searchResultMaps}">
 			<td th:text="${stat.count}"></td>	
  			<td th:text="${searchResultMap.title}"></td>
-			<td th:text="${searchResultMap.publishTime}"></td>
-			<td th:text="${searchResultMap.viewCount}"></td>
+			<td th:text="${searchResultMap.publishedAt}"></td>
+			<td></td>
+			<!-- <td th:text="${searchResultMap.videoViewCount}"></td> -->
 			<td th:text="${searchResultMap.channelTitle}"></td>
-			<td th:text="${searchResultMap.subscriberCount}"></td>
+			<!-- <td th:text="${searchResultMap.subscriberCount}"></td> -->
+			<td></td>
 		</tr>
 	</tbody>
 </table>
